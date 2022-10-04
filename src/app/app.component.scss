@@ -1,0 +1,26 @@
+
+  mat-sidenav-container {
+    height: 100%;
+  }
+
+  mat-sidenav{
+    background-color: rgb(63,81,181);
+    width: 200px;
+   
+  }
+
+  .image{
+    background-image: url("../app/components/images/eye.png");
+    width: 200px;
+    height: 200px;
+  }
+
+  .active{
+    background-color: rgba(22, 5, 94, 0.533);
+
+}
+
+mat-list-item {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+}

@@ -1,0 +1,40 @@
+
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="openedSideNav=!openedSideNav">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+
+  </button>
+
+</mat-toolbar>
+
+  <mat-sidenav-container>
+  <mat-sidenav [(opened)]="openedSideNav" mode="side" >
+  
+    <div class="image" alt=""> </div>
+    <mat-list>
+      
+      <mat-list-item [routerLinkActive]="'active'" routerLink="profile">Profile </mat-list-item>
+      <mat-list-item [routerLinkActive]="'active'" routerLink="pageTwo">PageTwo</mat-list-item>
+      <mat-list-item [routerLinkActive]="'active'" routerLink="imageProfile">ImageProfile</mat-list-item>
+    </mat-list>
+
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <mat-tab-group>MAIN
+      <mat-tab label="First"> Content 1 </mat-tab>
+      <mat-tab label="Second"> Content 2 </mat-tab>
+      <mat-tab label="Third"> Content 3 </mat-tab>
+    </mat-tab-group>
+  
+  </mat-sidenav-content>
+  </mat-sidenav-container>
+
+ 
