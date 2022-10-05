@@ -1,5 +1,6 @@
 <p>dialog works!</p>
 
 <mat-dialog-content> Her we show the movie image information {{data.title}}</mat-dialog-content>
+<mat-dialog-content> <img [src]="'https://image.tmdb.org/t/p/original'+data.poster_path" alt="" width="350px" height="auto">
+</mat-dialog-content>
 
-<mat-dialog-content> Her we show the movie image information {{'https://image.tmdb.org/t/p/original' + data.backdrop_path}}</mat-dialog-content>

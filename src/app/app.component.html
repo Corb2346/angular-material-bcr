@@ -4,7 +4,7 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="openedSideNav=!openedSideNav">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span class="netflix-Letters"></span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -31,7 +31,8 @@
   <mat-sidenav-content>
     <mat-tab-group>MAIN
       <mat-tab label="First"> 
-        <div *ngFor="let movie of movies">
+        <div *ngFor="let movie of movies, let indexOfelement as index">
+          <p> index: {{indexOfelement}}</p>
           <p> {{ movie.title }}</p>
           <p>{{movie.overview}} </p>
           <img [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" width="350px" height="auto">
@@ -39,13 +40,11 @@
         
       </mat-tab>
 
-      <mat-tab label="Second"> 
+      <mat-tab label="Second">  Agregados Recientemente
         <mat-grid-list cols="7" rowHeight="1:1.4">
 
-          <mat-grid-tile *ngFor="let movie of movies"> 
-               
-                <img [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" width="200px" height="auto">
-               
+          <mat-grid-tile *ngFor="let movie of movies, let indexOfelement as index"> 
+            <img mat-button (click)="openDialog(indexOfelement)" (click)="clickedIndex(indexOfelement)" class="imgOptions" [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" width="200px" height="auto" >
 
           </mat-grid-tile>
         </mat-grid-list>

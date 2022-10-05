@@ -9,6 +9,7 @@ import { ProfileComponent } from './components/profile/profile/profile.component
 import { PageTwoComponent } from './components/pageTwo/page-two/page-two.component';
 import { NotFoundComponent } from './components/not-found/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogComponent } from './components/dialog/dialog/dialog.component';
 
 
 @NgModule({
@@ -17,9 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     PageTwoComponent,
     NotFoundComponent,
-    
-
+    DialogComponent,
   ],
+  entryComponents :[ DialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

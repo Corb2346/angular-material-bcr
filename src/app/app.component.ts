@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs';
+import { Component, HostListener} from '@angular/core';
 import { GetMoviesService } from './services/get-movies.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './components/dialog/dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,11 @@ export class AppComponent {
   title = 'material-lab';
   openedSideNav = false;
   movies: any[] = [];  
-
-  constructor(private GetMoviesService : GetMoviesService){
+  indexOfelement?: any;
+  constructor(private GetMoviesService : GetMoviesService, public dialog: MatDialog ){
 
   }
+
 
   ngOnInit(): void {
     this.GetMoviesService.getMovies().subscribe({
@@ -28,6 +30,18 @@ export class AppComponent {
     })
   }
 
+  openDialog(indexOfelement: any){
+    console.log("openDialog: ",indexOfelement);
+    this.dialog.open(DialogComponent,{data: indexOfelement} );
+  
+  }
+
+  clickedIndex(indexOfelement: any){
+    console.log("index es: ",indexOfelement);
+    
+  }
+
+ 
  
 }
 

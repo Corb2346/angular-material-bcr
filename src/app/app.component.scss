@@ -15,6 +15,13 @@
     height: 200px;
   }
 
+  .netflix-Letters{
+    background-image: url("./components/images/netflix-letters.png");
+    width: 200px;
+    height: 50px;
+    
+  }
+
   .active{
     background-color: rgba(22, 5, 94, 0.533);
 
@@ -27,7 +34,7 @@ mat-list-item {
 
 mat-grid-tile {
   background: rgb(0, 0, 0);
-  margin: 5%;
+
 }
 
 mat-tab-group {
@@ -37,4 +44,8 @@ mat-tab-group {
 
 mat-tab-label-content{
   color: white;
+}
+
+.imgOptions{
+  padding: 80%;
 }
