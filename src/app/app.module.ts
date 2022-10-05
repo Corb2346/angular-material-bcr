@@ -8,6 +8,7 @@ import { SharedModule } from './components/shared/shared/shared.module';
 import { ProfileComponent } from './components/profile/profile/profile.component';
 import { PageTwoComponent } from './components/pageTwo/page-two/page-two.component';
 import { NotFoundComponent } from './components/not-found/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { NotFoundComponent } from './components/not-found/not-found/not-found.co
     ProfileComponent,
     PageTwoComponent,
     NotFoundComponent,
+    
 
   ],
   imports: [
@@ -23,6 +25,7 @@ import { NotFoundComponent } from './components/not-found/not-found/not-found.co
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

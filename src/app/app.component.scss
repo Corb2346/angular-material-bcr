@@ -24,3 +24,17 @@ mat-list-item {
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 32px;
 }
+
+mat-grid-tile {
+  background: rgb(0, 0, 0);
+  margin: 5%;
+}
+
+mat-tab-group {
+  color: white;
+  background-color: black 
+}
+
+mat-tab-label-content{
+  color: white;
+}

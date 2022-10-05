@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ImageProfileComponent } from '../../imageProfile/image-profile/image-profile.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatSidenavModule,
     FormsModule,
     MatListModule,
-    MatTabsModule
-    
-
+    MatTabsModule,
+    MatGridListModule
   ],
   exports: [
     MatToolbarModule,
@@ -33,7 +33,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule
   ]
 
 })

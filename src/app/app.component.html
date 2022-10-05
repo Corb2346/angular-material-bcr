@@ -1,4 +1,5 @@
 
+
 <mat-toolbar color="primary">
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="openedSideNav=!openedSideNav">
     <mat-icon>menu</mat-icon>
@@ -15,7 +16,7 @@
 </mat-toolbar>
 
   <mat-sidenav-container>
-  <mat-sidenav [(opened)]="openedSideNav" mode="side" >
+  <mat-sidenav [(opened)]="openedSideNav" mode="over" >
   
     <div class="image" alt=""> </div>
     <mat-list>
@@ -29,8 +30,28 @@
   
   <mat-sidenav-content>
     <mat-tab-group>MAIN
-      <mat-tab label="First"> Content 1 </mat-tab>
-      <mat-tab label="Second"> Content 2 </mat-tab>
+      <mat-tab label="First"> 
+        <div *ngFor="let movie of movies">
+          <p> {{ movie.title }}</p>
+          <p>{{movie.overview}} </p>
+          <img [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" width="350px" height="auto">
+        </div>
+        
+      </mat-tab>
+
+      <mat-tab label="Second"> 
+        <mat-grid-list cols="7" rowHeight="1:1.4">
+
+          <mat-grid-tile *ngFor="let movie of movies"> 
+               
+                <img [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" width="200px" height="auto">
+               
+
+          </mat-grid-tile>
+        </mat-grid-list>
+      
+      
+      </mat-tab>
       <mat-tab label="Third"> Content 3 </mat-tab>
     </mat-tab-group>
   
