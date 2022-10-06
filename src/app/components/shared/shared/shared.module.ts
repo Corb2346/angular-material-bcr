@@ -27,7 +27,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatListModule,
     MatTabsModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+ 
   ],
   exports: [
     MatToolbarModule,
@@ -37,7 +38,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatListModule,
     MatTabsModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+
   ]
 
 })

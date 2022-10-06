@@ -32,9 +32,14 @@ export class AppComponent {
 
   openDialog(indexOfelement: any){
     console.log("openDialog: ",indexOfelement);
-    this.dialog.open(DialogComponent,{data: indexOfelement} );
-  
+    this.dialog.open(DialogComponent,{data: indexOfelement,
+      height: '700px',
+      width: '600px',
+    } );
+
   }
+
+  
 
   clickedIndex(indexOfelement: any){
     console.log("index es: ",indexOfelement);
